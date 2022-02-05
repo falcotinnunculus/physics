@@ -1,344 +1,119 @@
-(* Content-type: application/vnd.wolfram.mathematica *)
-
-(*** Wolfram Notebook File ***)
-(* http://www.wolfram.com/nb *)
-
-(* CreatedBy='Mathematica 12.1' *)
-
-(*CacheID: 234*)
-(* Internal cache information:
-NotebookFileLineBreakTest
-NotebookFileLineBreakTest
-NotebookDataPosition[       158,          7]
-NotebookDataLength[     15610,        334]
-NotebookOptionsPosition[     14704,        311]
-NotebookOutlinePosition[     15102,        327]
-CellTagsIndexPosition[     15059,        324]
-WindowFrame->Normal*)
-
-(* Beginning of Notebook Content *)
-Notebook[{
-Cell[BoxData[
- RowBox[{
-  RowBox[{"pytania", "=", 
-   RowBox[{"{", 
-    RowBox[{
-    "\"\<Zasada superpozycji, prawo Coulomba, pole elektryczne, linie pola, \
-zasady rysowania, metoda pomiaru si\[LSlash]y elektrostatycznej\>\"", ",", 
-     "\"\<Eksperyment Millikana, \[LSlash]adunek elementarny\>\"", ",", 
-     "\"\<Pole elektryczne dla \[LSlash]adunku liniowego, powierzchniowego i \
-obj\:0119to\:015bciowego \[Dash] zapis og\[OAcute]lny\>\"", ",", 
-     "\"\<Prawo Gaussa w postaci r\[OAcute]\:017cniczkowej i \
-ca\[LSlash]kowej, strumie\:0144 pola elektrycznego\>\"", ",", 
-     "\"\<Pole elektryczne wok\[OAcute]\[LSlash] \[LSlash]adunk\[OAcute]w z \
-symetri\:0105\[Dash]przyk\[LSlash]ady zastosowa\:0144 prawa Gaussa\>\"", ",", 
-     "\"\<Rotacja pola E w elektrostatyce\>\"", ",", 
-     "\"\<Potencja\[LSlash] w elektrostatyce,potencja\[LSlash] dla typowych \
-rozk\[LSlash]ad\[OAcute]w \[LSlash]adunku (zapis og\[OAcute]lny oraz potencja\
-\[LSlash] na\[LSlash]adowanej kuli i sfery)[te\:017c W3]\>\"", ",", 
-     "\"\<\[CapitalLSlash]adunek, pole, potencja\[LSlash] w metalach i ich \
-otoczeniu, \:201eostrza\[CloseCurlyDoubleQuote] z metalu, zjawiska, \
-demonstracje, generator Van de Graaffa \[Dash] og\[OAcute]lna zasada dzia\
-\[LSlash]ania\>\"", ",", 
-     "\"\<Klatka/puszka Faradaya, podstawy fizyczne, realizacje, \
-zastosowania, demonstracje\>\"", ",", 
-     "\"\<Wy\[LSlash]adowanie koronowe (wy\[LSlash]adowanie \
-miote\[LSlash]kowe,ognie \:015bw.Elma)\[Dash]podstawy fizyczne\>\"", ",", 
-     "\"\<R\[OAcute]wnania Poissona i Laplace\[CloseCurlyQuote]a\>\"", ",", 
-     "\"\<Sk\[LSlash]adowe E przy powierzchni\>\"", ",", 
-     "\"\<Pole-potencja\[LSlash]-\[LSlash]adunek\[Dash]wszystkie relacje\>\"",
-      ",", "\"\<Praca i energia w elektrostatyce\>\"", ",", 
-     "\"\<Pojemno\:015b\[CAcute] elektryczna, kondensator \[Dash] pojemno\
-\:015b\[CAcute], konstrukcja, rola dielektryka; *dla ch\:0119tnych: doczyta\
-\[CAcute] jak dzia\[LSlash]a superkondensator\>\"", ",", 
-     "\"\<Szeregowe i r\[OAcute]wnoleg\[LSlash]e \[LSlash]\:0105czenie \
-kondensator\[OAcute]w\>\"", ",", 
-     "\"\<Elektryczny moment dipolowy, dipol idealny i fizyczny, \
-rozwini\:0119cie multipolowe potencja\[LSlash]u\>\"", ",", 
-     "\"\<Energia dipola w polu elektrycznym,energia oddzia\[LSlash]ywania dw\
-\[OAcute]ch dipoli elektrycznych\>\"", ",", 
-     "\"\<Si\[LSlash]a dzia\[LSlash]aj\:0105ca na elektryczny moment \
-dipolowy,moment si\[LSlash]y dzia\[LSlash]aj\:0105cy na moment dipolow\>\"", 
-     ",", "\"\<Polaryzowalno\:015b\[CAcute],polaryzowalno\:015b\[CAcute] \
-atomu (jednorodnie na\[LSlash]adowanej kuli),cz\:0105steczek\>\"", ",", 
-     "\"\<Oddzia\[LSlash]ywanie atom-\[LSlash]adunek oraz dipol-dipol,si\
-\[LSlash]a van der Waalsa,potencja\[LSlash] Lennarda-Jonesa\>\"", ",", 
-     "\"\<Polaryzacja dielektryk\[OAcute]w \
+pytania = {"Zasada superpozycji, prawo Coulomba, pole elektryczne, \
+linie pola, zasady rysowania, metoda pomiaru siły elektrostatycznej", 
+   "Eksperyment Millikana, ładunek elementarny", 
+   "Pole elektryczne dla ładunku liniowego, powierzchniowego i \
+objętościowego \[Dash] zapis ogólny", 
+   "Prawo Gaussa w postaci różniczkowej i całkowej, strumień pola \
+elektrycznego", 
+   "Pole elektryczne wokół ładunków z symetrią\[Dash]przykłady \
+zastosowań prawa Gaussa", "Rotacja pola E w elektrostatyce", 
+   "Potencjał w elektrostatyce,potencjał dla typowych rozkładów \
+ładunku (zapis ogólny oraz potencjał naładowanej kuli i sfery)[też \
+W3]", "Ładunek, pole, potencjał w metalach i ich otoczeniu, „ostrza\
+\[CloseCurlyDoubleQuote] z metalu, zjawiska, demonstracje, generator \
+Van de Graaffa \[Dash] ogólna zasada działania", 
+   "Klatka/puszka Faradaya, podstawy fizyczne, realizacje, \
+zastosowania, demonstracje", 
+   "Wyładowanie koronowe (wyładowanie miotełkowe,ognie \
+św.Elma)\[Dash]podstawy fizyczne", 
+   "Równania Poissona i Laplace\[CloseCurlyQuote]a", 
+   "Składowe E przy powierzchni", 
+   "Pole-potencjał-ładunek\[Dash]wszystkie relacje", 
+   "Praca i energia w elektrostatyce", 
+   "Pojemność elektryczna, kondensator \[Dash] pojemność, \
+konstrukcja, rola dielektryka; *dla chętnych: doczytać jak działa \
+superkondensator", "Szeregowe i równoległe łączenie kondensatorów", 
+   "Elektryczny moment dipolowy, dipol idealny i fizyczny, \
+rozwinięcie multipolowe potencjału", 
+   "Energia dipola w polu elektrycznym,energia oddziaływania dwóch \
+dipoli elektrycznych", 
+   "Siła działająca na elektryczny moment dipolowy,moment siły \
+działający na moment dipolow", 
+   "Polaryzowalność,polaryzowalność atomu (jednorodnie naładowanej \
+kuli),cząsteczek", 
+   "Oddziaływanie atom-ładunek oraz dipol-dipol,siła van der \
+Waalsa,potencjał Lennarda-Jonesa", 
+   "Polaryzacja dielektryków \
 (mechanizm,zastosowania,demonstracje):piezoelektryki,piroelektryki,\
-ferroelektryki;elektret,zjawisko elektrostrykcji[te\:017c W6]\>\"", ",", 
-     "\"\<Wektor polaryzacji P.\[CapitalLSlash]adunki zwi\:0105zane \
-powierzchniowe i obj\:0119to\:015bciowe a polaryzacja P\>\"", ",", 
-     "\"\<Potencja\[LSlash] od \[LSlash]a\:0144cucha dipoli\>\"", ",", 
-     "\"\<Potencja\[LSlash] i pole elektryczne jednorodnie spolaryzowanej \
-kuli\>\"", ",", 
-     "\"\<Prawo Gaussa dla dielektryk\[OAcute]w,pole indukcji elektrycznej \
-\|01d437\>\"", ",", 
-     "\"\<Dielektryki liniowe,\|01d700,\|01d700\|01d45f,typowe warto\:015bci \
-\|01d700\|01d45f\>\"", ",", 
-     "\"\<Warunki graniczne dla \|01d437 i dla dielektryka liniowego\>\"", 
-     ",", "\"\<Wektory E0, E, E', D, P, kondensator z \
-dielektrykiem\[Dash]pojemno\:015b\[CAcute] i energia\>\"", ",", 
-     "\"\<Energia zgromadzona w kondensatorze, tak\:017ce w obecno\:015bci \
-dielektryka, energia pola w dielektryku\>\"", ",", 
-     "\"\<Si\[LSlash]a dzia\[LSlash]aj\:0105ca na dielektryk w \
-kondensatorze\>\"", ",", 
-     "\"\<Przenikalno\:015b\[CAcute] elektryczna a polaryzowalno\:015b\
-\[CAcute]\[Dash]gazy atomowe i polarne\>\"", ",", 
-     "\"\<Przenikalno\:015b\[CAcute] elektryczna a polaryzowalno\:015b\
-\[CAcute]\[Dash]wz\[OAcute]r Clausiusa-Mossottiego\>\"", ",", 
-     "\"\<R\[OAcute]wnanie \
-Laplace\[CloseCurlyQuote]a\[Dash]w\[LSlash]a\:015bciwo\:015bci,twierdzenie o \
-jednoznaczno\:015bci,metoda obraz\[OAcute]w\>\"", ",", 
-     "\"\<Pr\:0105d elektryczny\[Dash]nat\:0119\:017cenie,g\:0119sto\:015b\
-\[CAcute] pr\:0105du,niejednorodno\:015bci,op\[OAcute]r \
-w\[LSlash]a\:015bciwy,przewodno\:015b\[CAcute] w\[LSlash]a\:015bciwa,model \
-Drudego (za\[LSlash]o\:017cenia,wnioski,wady)\>\"", ",", 
-     "\[IndentingNewLine]", 
-     "\"\<Op\[OAcute]r,prawo/regu\[LSlash]a Ohma,prawo \
-Joule\[CloseCurlyQuote]a,problemy z prawem Ohma\>\"", ",", 
-     "\"\<Og\[OAcute]lnie:podstawy wsp\[OAcute]\[LSlash]czesnej teorii \
-przewodnictwa (podstawy dla przypadku 1D,teoria pasmowa)\>\"", ",", 
-     "\"\<Si\[LSlash]a elektromotoryczna,op\[OAcute]r wewn\:0119trzny \
-ogniwa,ogniwa galwaniczne\[Dash]podstawy\>\"", ",", 
-     "\"\<Prawa Kirchhoffa,za\[LSlash]o\:017cenia,ograniczenia\>\"", ",", 
-     "\"\<\[CapitalLSlash]\:0105czenie opor\[OAcute]w,pomiar napi\:0119cia i \
-nat\:0119\:017cenia pr\:0105du oraz oporu,galwanometr,woltomierz i \
-amperomierz\>\"", ",", 
-     "\"\<Zachowanie \[LSlash]adunku,dywergencja z g\:0119sto\:015bci \
-pr\:0105du \|01d457\>\"", ",", 
-     "\"\<\:0179r\[OAcute]d\[LSlash]a pola magnetycznego (w tym \
-spin,do\:015bwiadczenie Sterna-Gerlacha),linie pola magnetycznego\>\"", ",", 
-     "\"\<Si\[LSlash]a Lorentza,ruch \[LSlash]adunku w polu magnetycznym\
-\[Dash]trajektoria,cz\:0119sto\:015b\[CAcute] cyklotronowa,spektrometr mas,do\
-\:015bwiadczenie J.J.Thomsona,efekt Halla\>\"", ",", 
-     "\"\<Si\[LSlash]a dzia\[LSlash]aj\:0105ca na przewodnik z \
-pr\:0105dem,przyk\[LSlash]ady\>\"", ",", 
-     "\"\<Prawo Biota-Savarta,przyk\[LSlash]ady,zastosowania\>\"", ",", 
-     "\"\<Dotychczasowa i nowa definicja ampera[A],oddzia\[LSlash]ywanie \
-przewodnik\[OAcute]w z pr\:0105dem\[Dash]zmiana w uk\[LSlash]adzie SI\>\"", 
-     ",", "\"\<Prawo Amp\[EGrave]re\[CloseCurlyQuote]a\>\"", ",", 
-     "\"\<Prawo Gaussa dla magnetostatyki\>\"", ",", 
-     "\"\<Analogie magnetostatyczno-elektrostatyczne,r\[OAcute]wnania \
-Maxwella dla elektrostatyki i magnetostatyki\>\"", ",", 
-     "\"\<Potencja\[LSlash] wektorowy \|01d434,do\:015bwiadczenie \
-Bohma-Aharonova\>\"", ",", 
-     "\"\<Multipolowe rozwini\:0119cie potencja\[LSlash]u \|01d434\>\"", ",", 
-     "\"\<Magnetyczny moment dipolowy,si\[LSlash]a,moment \
-si\[LSlash]y,energia\>\"", ",", 
-     "\"\<Generowanie pola magnetycznego kwadrupolowego i jednorodnego\>\"", 
-     ",", "\"\<Warunki brzegowe dla pola B i potencja\[LSlash]u A\>\"", ",", 
-     "\"\<Zale\:017cno\:015bci mi\:0119dzy \|01d434,\|01d457,\|01d435\>\"", 
-     ",", "\"\<Pole magnetyczne w \
-materii\[Dash]magnetyzacja,nat\:0119\:017cenie pola \
-magnetycznego,o\:015brodki magnetyczne liniowe\>\"", ",", 
-     "\"\<Diamagnetyzm\[Dash]podstawy fizyczne (podej\:015bcie \
-Langevina),przyk\[LSlash]ady\>\"", ",", 
-     "\"\<Paramagnetyzm\[Dash]podstawy fizyczne,przyk\[LSlash]ady\>\"", ",", 
-     "\"\<Ferromagnetyzm\[Dash]podstawy fizyczne opisowo,domeny,\:015bciany \
+ferroelektryki;elektret,zjawisko elektrostrykcji[też W6]", 
+   "Wektor polaryzacji P.Ładunki związane powierzchniowe i \
+objętościowe a polaryzacja P", "Potencjał od łańcucha dipoli", 
+   "Potencjał i pole elektryczne jednorodnie spolaryzowanej kuli", 
+   "Prawo Gaussa dla dielektryków,pole indukcji elektrycznej \
+\|01d437", 
+   "Dielektryki liniowe,\|01d700,\|01d700\|01d45f,typowe wartości \
+\|01d700\|01d45f", 
+   "Warunki graniczne dla \|01d437 i dla dielektryka liniowego", 
+   "Wektory E0, E, E', D, P, kondensator z \
+dielektrykiem\[Dash]pojemność i energia", 
+   "Energia zgromadzona w kondensatorze, także w obecności \
+dielektryka, energia pola w dielektryku", 
+   "Siła działająca na dielektryk w kondensatorze", 
+   "Przenikalność elektryczna a polaryzowalność\[Dash]gazy atomowe i \
+polarne", 
+   "Przenikalność elektryczna a polaryzowalność\[Dash]wzór \
+Clausiusa-Mossottiego", 
+   "Równanie Laplace\[CloseCurlyQuote]a\[Dash]właściwości,twierdzenie \
+o jednoznaczności,metoda obrazów", 
+   "Prąd elektryczny\[Dash]natężenie,gęstość \
+prądu,niejednorodności,opór właściwy,przewodność właściwa,model \
+Drudego (założenia,wnioski,wady)",
+   "Opór,prawo/reguła Ohma,prawo Joule\[CloseCurlyQuote]a,problemy z \
+prawem Ohma", 
+   "Ogólnie:podstawy współczesnej teorii przewodnictwa (podstawy dla \
+przypadku 1D,teoria pasmowa)", 
+   "Siła elektromotoryczna,opór wewnętrzny ogniwa,ogniwa galwaniczne\
+\[Dash]podstawy", "Prawa Kirchhoffa,założenia,ograniczenia", 
+   "Łączenie oporów,pomiar napięcia i natężenia prądu oraz \
+oporu,galwanometr,woltomierz i amperomierz", 
+   "Zachowanie ładunku,dywergencja z gęstości prądu \|01d457", 
+   "Źródła pola magnetycznego (w tym spin,doświadczenie \
+Sterna-Gerlacha),linie pola magnetycznego", 
+   "Siła Lorentza,ruch ładunku w polu \
+magnetycznym\[Dash]trajektoria,częstość cyklotronowa,spektrometr \
+mas,doświadczenie J.J.Thomsona,efekt Halla", 
+   "Siła działająca na przewodnik z prądem,przykłady", 
+   "Prawo Biota-Savarta,przykłady,zastosowania", 
+   "Dotychczasowa i nowa definicja ampera[A],oddziaływanie \
+przewodników z prądem\[Dash]zmiana w układzie SI", 
+   "Prawo Ampère\[CloseCurlyQuote]a", 
+   "Prawo Gaussa dla magnetostatyki", 
+   "Analogie magnetostatyczno-elektrostatyczne,równania Maxwella dla \
+elektrostatyki i magnetostatyki", 
+   "Potencjał wektorowy \|01d434,doświadczenie Bohma-Aharonova", 
+   "Multipolowe rozwinięcie potencjału \|01d434", 
+   "Magnetyczny moment dipolowy,siła,moment siły,energia", 
+   "Generowanie pola magnetycznego kwadrupolowego i jednorodnego", 
+   "Warunki brzegowe dla pola B i potencjału A", 
+   "Zależności między \|01d434,\|01d457,\|01d435", 
+   "Pole magnetyczne w materii\[Dash]magnetyzacja,natężenie pola \
+magnetycznego,ośrodki magnetyczne liniowe", 
+   "Diamagnetyzm\[Dash]podstawy fizyczne (podejście \
+Langevina),przykłady", 
+   "Paramagnetyzm\[Dash]podstawy fizyczne,przykłady", 
+   "Ferromagnetyzm\[Dash]podstawy fizyczne opisowo,domeny,ściany \
 Blocha,szum Barkhausena,koercja,histereza,zastosowania \
-ferromagnetyk\[OAcute]w w zale\:017cno\:015bci od koercji\>\"", ",", 
-     "\"\<Dla ch\:0119tnych\[Dash]pojedyncze atomy w polu magnetycznym\>\"", 
-     ",", "\"\<Prawo indukcji Faradaya,do\:015bwiadczenia \
-Faradaya,si\[LSlash]a elektromotoryczna\>\"", ",", 
-     "\"\<Pr\:0105dy wirowe, regu\[LSlash]a Lenza, przyk\[LSlash]ady\>\"", 
-     ",", "\"\<Poprawka Maxwella do prawa Amp\[EGrave]re\[CloseCurlyQuote]a\>\
-\"", ",", 
-     "\"\<R\[OAcute]wnania Maxwella \[Dash] posta\[CAcute] ca\[LSlash]kowa i \
-r\[OAcute]\:017cniczkowa, symetria i asymetria r\[OAcute]wna\:0144, \
-interpretacja\>\"", ",", "\"\<R\[OAcute]wnania Maxwella w materii\>\"", ",", 
-     "\"\<Wektor Poyntinga, energia pola magnetycznego\>\"", ",", 
-     "\"\<Wst\:0119p:fale elektromagnetyczne,r\[OAcute]wnanie \
-falowe,poprzeczno\:015b\[CAcute],fala p\[LSlash]aska\>\"", ",", 
-     "\"\<Indukcja wzajemna,indukcyjno\:015b\[CAcute]\>\"", ",", 
-     "\"\<Obw\[OAcute]d RL,induktor\>\"", ",", 
-     "\"\<Obw\[OAcute]d RLC\[Dash]z generatorem,rezonans w uk\[LSlash]adzie \
-szeregowym i r\[OAcute]wnoleg\[LSlash]ym\>\"", ",", 
-     "\"\<Drgania w\[LSlash]asne (t\[LSlash]umione) w obwodzie RLC,analogia \
-do drgaj\:0105cej masy na spr\:0119\:017cynie\>\"", ",", 
-     "\"\<Obw\[OAcute]d LC bez t\[LSlash]umienia\[Dash]bilans \
-energetyczny\>\""}], "}"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.8530744955565205`*^9, 3.8530746455682945`*^9}, {
-   3.8530791434995203`*^9, 3.8530792857255015`*^9}, {3.8530793207812357`*^9, 
-   3.853079486388348*^9}, {3.853079520579397*^9, 3.8530795741801605`*^9}, 
-   3.8530803962717524`*^9, {3.853080540711862*^9, 3.8530805542857*^9}, {
-   3.8530806148325443`*^9, 3.853080632489916*^9}, {3.8530807010206814`*^9, 
-   3.8530807133226767`*^9}},ExpressionUUID->"24ef0814-fd12-484b-875e-\
-9e6b0ab9687b"],
+ferromagnetyków w zależności od koercji", 
+   "Dla chętnych\[Dash]pojedyncze atomy w polu magnetycznym", 
+   "Prawo indukcji Faradaya,doświadczenia Faradaya,siła \
+elektromotoryczna", "Prądy wirowe, reguła Lenza, przykłady", 
+   "Poprawka Maxwella do prawa Ampère\[CloseCurlyQuote]a", 
+   "Równania Maxwella \[Dash] postać całkowa i różniczkowa, symetria \
+i asymetria równań, interpretacja", "Równania Maxwella w materii", 
+   "Wektor Poyntinga, energia pola magnetycznego", 
+   "Wstęp:fale elektromagnetyczne,równanie falowe,poprzeczność,fala \
+płaska", "Indukcja wzajemna,indukcyjność", "Obwód RL,induktor", 
+   "Obwód RLC\[Dash]z generatorem,rezonans w układzie szeregowym i \
+równoległym", 
+   "Drgania własne (tłumione) w obwodzie RLC,analogia do drgającej \
+masy na sprężynie", 
+   "Obwód LC bez tłumienia\[Dash]bilans energetyczny"};
+   
+que = {RandomInteger[{1, 34}], RandomInteger[{1, 26}], 
+   RandomInteger[{1, 12}]};
+delta = {0, 34, 34 + 26};
+color = {Red, Green, Blue}; 
 
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"que", "=", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"RandomInteger", "[", 
-      RowBox[{"{", 
-       RowBox[{"1", ",", "34"}], "}"}], "]"}], ",", 
-     RowBox[{"RandomInteger", "[", 
-      RowBox[{"{", 
-       RowBox[{"1", ",", "26"}], "}"}], "]"}], ",", 
-     RowBox[{"RandomInteger", "[", 
-      RowBox[{"{", 
-       RowBox[{"1", ",", "12"}], "}"}], "]"}]}], "}"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"delta", "=", 
-   RowBox[{"{", 
-    RowBox[{"0", ",", "34", ",", 
-     RowBox[{"34", "+", "26"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"color", "=", 
-    RowBox[{"{", 
-     RowBox[{"Red", ",", "Green", ",", "Blue"}], "}"}]}], ";"}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{"For", "[", 
-  RowBox[{
-   RowBox[{"i", "=", "1"}], ",", 
-   RowBox[{"i", "\[LessEqual]", "3"}], ",", 
-   RowBox[{"i", "++"}], ",", 
-   RowBox[{"Print", "[", 
-    RowBox[{
-     RowBox[{"Style", "[", 
-      RowBox[{
-       RowBox[{"que", "[", 
-        RowBox[{"[", "i", "]"}], "]"}], ",", 
-       RowBox[{"color", "[", 
-        RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", "\"\<: \>\"", ",", 
-     RowBox[{"pytania", "[", 
-      RowBox[{"[", 
-       RowBox[{
-        RowBox[{"(", 
-         RowBox[{"que", "+", "delta"}], ")"}], "[", 
-        RowBox[{"[", "i", "]"}], "]"}], "]"}], "]"}]}], "]"}]}], 
-  "]"}]}], "Input",
- CellChangeTimes->{{3.8530796334993567`*^9, 3.853079694689983*^9}, {
-  3.85307984031841*^9, 3.85307988566955*^9}, {3.853080272078966*^9, 
-  3.8530803383080425`*^9}, {3.8530803795839863`*^9, 3.8530803806527743`*^9}, {
-  3.853080453050589*^9, 3.8530804667355776`*^9}, {3.853080665165814*^9, 
-  3.853080674564809*^9}},
- CellLabel->
-  "In[146]:=",ExpressionUUID->"6df1d608-c99b-411a-855d-9b97e995d0cd"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{
-   StyleBox["10",
-    StripOnInput->False,
-    LineColor->RGBColor[1, 0, 0],
-    FrontFaceColor->RGBColor[1, 0, 0],
-    BackFaceColor->RGBColor[1, 0, 0],
-    GraphicsColor->RGBColor[1, 0, 0],
-    FontColor->RGBColor[1, 0, 0]], "\[InvisibleSpace]", "\<\": \"\>", 
-   "\[InvisibleSpace]", "\<\"Wy\[LSlash]adowanie koronowe \
-(wy\[LSlash]adowanie miote\[LSlash]kowe,ognie \:015bw.Elma)\[Dash]podstawy \
-fizyczne\"\>"}],
-  SequenceForm[
-   Style[10, 
-    RGBColor[1, 0, 0]], ": ", 
-   "Wy\[LSlash]adowanie koronowe (wy\[LSlash]adowanie \
-miote\[LSlash]kowe,ognie \:015bw.Elma)\[Dash]podstawy fizyczne"],
-  Editable->False]], "Print",
- CellChangeTimes->{{3.853080342309057*^9, 3.8530803651432056`*^9}, 
-   3.8530804053745594`*^9, 3.8530804717167606`*^9, 3.8530805597939415`*^9, {
-   3.85308065280156*^9, 3.8530806774148135`*^9}, {3.853080726326765*^9, 
-   3.853080748953932*^9}},
- CellLabel->
-  "During evaluation of \
-In[146]:=",ExpressionUUID->"479da2cc-b7bd-46fe-854c-22dcfb8f3262"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{
-   StyleBox["6",
-    StripOnInput->False,
-    LineColor->RGBColor[0, 1, 0],
-    FrontFaceColor->RGBColor[0, 1, 0],
-    BackFaceColor->RGBColor[0, 1, 0],
-    GraphicsColor->RGBColor[0, 1, 0],
-    FontColor->RGBColor[0, 1, 0]], "\[InvisibleSpace]", "\<\": \"\>", 
-   "\[InvisibleSpace]", "\<\"\[CapitalLSlash]\:0105czenie \
-opor\[OAcute]w,pomiar napi\:0119cia i nat\:0119\:017cenia pr\:0105du oraz \
-oporu,galwanometr,woltomierz i amperomierz\"\>"}],
-  SequenceForm[
-   Style[6, 
-    RGBColor[0, 1, 0]], ": ", 
-   "\[CapitalLSlash]\:0105czenie opor\[OAcute]w,pomiar napi\:0119cia i nat\
-\:0119\:017cenia pr\:0105du oraz oporu,galwanometr,woltomierz i amperomierz"],
-  Editable->False]], "Print",
- CellChangeTimes->{{3.853080342309057*^9, 3.8530803651432056`*^9}, 
-   3.8530804053745594`*^9, 3.8530804717167606`*^9, 3.8530805597939415`*^9, {
-   3.85308065280156*^9, 3.8530806774148135`*^9}, {3.853080726326765*^9, 
-   3.853080748975931*^9}},
- CellLabel->
-  "During evaluation of \
-In[146]:=",ExpressionUUID->"0dcdcfc4-7275-4da1-9f40-af1a7e81693e"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{
-   StyleBox["3",
-    StripOnInput->False,
-    LineColor->RGBColor[0, 0, 1],
-    FrontFaceColor->RGBColor[0, 0, 1],
-    BackFaceColor->RGBColor[0, 0, 1],
-    GraphicsColor->RGBColor[0, 0, 1],
-    FontColor->RGBColor[0, 0, 1]], "\[InvisibleSpace]", "\<\": \"\>", 
-   "\[InvisibleSpace]", "\<\"Poprawka Maxwella do prawa Amp\[EGrave]re\
-\[CloseCurlyQuote]a\"\>"}],
-  SequenceForm[
-   Style[3, 
-    RGBColor[0, 0, 1]], ": ", 
-   "Poprawka Maxwella do prawa Amp\[EGrave]re\[CloseCurlyQuote]a"],
-  Editable->False]], "Print",
- CellChangeTimes->{{3.853080342309057*^9, 3.8530803651432056`*^9}, 
-   3.8530804053745594`*^9, 3.8530804717167606`*^9, 3.8530805597939415`*^9, {
-   3.85308065280156*^9, 3.8530806774148135`*^9}, {3.853080726326765*^9, 
-   3.853080748991935*^9}},
- CellLabel->
-  "During evaluation of \
-In[146]:=",ExpressionUUID->"1e5186fc-a43e-4112-bb60-ec6f44a592aa"]
-}, Open  ]]
-}, Open  ]],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.8530800497583666`*^9, 
-  3.853080053273347*^9}},ExpressionUUID->"220e053f-26aa-489c-8470-\
-00487e53c81f"]
-},
-WindowSize->{760, 833},
-WindowMargins->{{Automatic, 290}, {8, Automatic}},
-FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (June 19, 2020)",
-StyleDefinitions->"Default.nb",
-ExpressionUUID->"646e3484-2b2f-47cf-adf6-6fb90a33d45a"
-]
-(* End of Notebook Content *)
-
-(* Internal cache information *)
-(*CellTagsOutline
-CellTagsIndex->{}
-*)
-(*CellTagsIndex
-CellTagsIndex->{}
-*)
-(*NotebookFileOutline
-Notebook[{
-Cell[558, 20, 9063, 145, 1568, InheritFromParent,ExpressionUUID->"24ef0814-fd12-484b-875e-9e6b0ab9687b"],
-Cell[CellGroupData[{
-Cell[9646, 169, 1813, 52, 178, "Input",ExpressionUUID->"6df1d608-c99b-411a-855d-9b97e995d0cd"],
-Cell[CellGroupData[{
-Cell[11484, 225, 1025, 25, 22, "Print",ExpressionUUID->"479da2cc-b7bd-46fe-854c-22dcfb8f3262"],
-Cell[12512, 252, 1089, 25, 41, "Print",ExpressionUUID->"0dcdcfc4-7275-4da1-9f40-af1a7e81693e"],
-Cell[13604, 279, 915, 23, 22, "Print",ExpressionUUID->"1e5186fc-a43e-4112-bb60-ec6f44a592aa"]
-}, Open  ]]
-}, Open  ]],
-Cell[14546, 306, 154, 3, 28, "Input",ExpressionUUID->"220e053f-26aa-489c-8470-00487e53c81f"]
-}
-]
-*)
-
-(* End of internal cache information *)
-
+For[i = 1, i <= 3, i++, 
+ Print[Style[que[[i]], color[[i]]], ": ", 
+  pytania[[(que + delta)[[i]]]]]]
